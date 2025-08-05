@@ -9,11 +9,19 @@
     "type": "git",
     "url": "git+https://github.com/raissa-eugenio/api-backend-express.git"
   },
-  "author": "",
+  "keywords": [
+    "node",
+    "zod",
+    "mysql"
+  ],
+  "author": "raissa eugenio",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/raissa-eugenio/api-backend-express/issues"
   },
   "homepage": "https://github.com/raissa-eugenio/api-backend-express#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
