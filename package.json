@@ -3,22 +3,20 @@
   "version": "1.0.0",
   "description": "API Backend com Express, Prisma e Zod",
   "main": "src/server.js",
+  "type":"module",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
   },
-  "keywords": [
+   "keywords": [
     "node",
     "express",
     "prisma",
     "zod",
     "mysql"
   ],
-  "author": "raissa eugenio",
+"author": "Renan Cavichi",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/raissa-eugenio/api-backend-express/issues"
-  },
-  "homepage": "https://github.com/raissa-eugenio/api-backend-express#readme",
   "dependencies": {
     "express": "^5.1.0"
   },
