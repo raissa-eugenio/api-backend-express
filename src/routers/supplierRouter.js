@@ -1,40 +1,16 @@
 import express from 'express';
+import { createSupplierController } from '../controller/supplier/createSupplierController.js';
+import { listSupplierController } from '../controller/supplier/listSupplierController.js';
+import { getByIdSupplierController } from '../controller/supplier/getByIdSupplierController.js';
+import { editSupplierController } from '../controller/supplier/editSupplierController.js';
+import { deleteSupplierController } from '../controller/supplier/deleteSupplierController.js';
 
 const router = express.Router();
 
-router.post('/', (req, res) => {
-  const dados = req.body
-  res.json({
-    message: 'Fornecedor criado com sucesso!',
-    supplier: dados
-  })
-})
-
-//Lista todos os fornecedores
-router.get('/', (req, res) => {
-  res.json({message: 'Fornecedores consultados com sucesso!'})
-})
-
-//Consulta um fornecedor específico
-router.get('/:id', (req, res) => {
-  const  id  = req.params.id
-  res.json({message: `Fornecedor com ID ${id} consultado com sucesso!`})
-})
-
-//Edita um fornecedor específico
-router.put('/:id', (req, res) => {
-  const  id  = req.params.id
-  const dados = req.body
-  res.json({
-    message: 'Fornecedor editado com sucesso!',
-    supplier: dados
-  })
-})
-
-router.delete('/:id', (req, res) => {
-  const  id  = req.params.id
-  console.log(`ID: ${id} excluído com sucesso!`)
-  res.json({message: `Fornecedor com ID ${id} excluído com sucesso!`})
-})
+router.post('/', createSupplierController);
+router.get('/', listSupplierController);
+router.get('/:id', getByIdSupplierController);
+router.put('/:id', editSupplierController);
+router.delete('/:id', deleteSupplierController);
 
 export default router;

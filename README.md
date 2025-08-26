@@ -40,6 +40,6 @@ app.post('/produto', (req, res) => {
 - Rota ou endereço: /produto
 - tipo de resposta: json
 
-# Para que serve o Router do Express?
+# Para que serve o Router(Roteador) do Express?
 
 -Para Organização e Liberação do server.js

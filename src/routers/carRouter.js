@@ -1,44 +1,16 @@
 import express from 'express';
+import { createCarController } from '../controller/car/createCarController.js';
+import { listCarController } from '../controller/car/listCarController.js';
+import { getByIdCarController } from '../controller/car/getByIdCarController.js';
+import { editCarController } from '../controller/car/editCarController.js';
+import { deleteCarController } from '../controller/car/deleteCarController.js';
 
 const router = express.Router();
 
-router.post('/', (req, res) => {
-  const dados = req.body
-  res.json({
-    message: 'carro criado com sucesso!',
-    car: dados
-  })
-})
-
-//Lista todos os carros
-router.get('/', (req, res) => {
-  res.json({message: 'carros consultados com sucesso!'})
-})
-
-//Consulta um carro específico
-router.get('/:id', (req, res) => {
-  const  id  = req.params.id
-  res.json({message: `carro com ID ${id} consultado com sucesso!`})
-})
-
-//Atualiza um carro específico
-router.put('/:id', (req, res) => {
-  const id = req.params.id;
-  const { marca, modelo } = req.body;
-  res.json({
-    message: `${marca} ${modelo} com id ${id} alterado`,
-    
-      marca,
-      modelo
-    
-  });
-});
-
-
-router.delete('/:id', (req, res) => {
-  const  id  = req.params.id
-  console.log(`ID: ${id} excluído com sucesso!`)
-  res.json({message: `carro com ID ${id} excluído com sucesso!`})
-})
+router.post('/', createCarController);
+router.get('/', listCarController);
+router.get('/:id', getByIdCarController);
+router.put('/:id', editCarController);
+router.delete('/:id', deleteCarController);
 
 export default router;
