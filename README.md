@@ -10,8 +10,8 @@ ou
 # Comandos Git
 
 // configura usuário e email do git na máquina
-- git config --global user.name "Renan Cavichi"
-- git config --global user.email "renancavichi@gmail.com" 
+- git config --global user.name "raissa eugenio"
+- git config --global user.email "eugenior@aluno.ifsp.edu.br" 
 
 - git init // inicia o git em uma pasta
 - git remote add origin _url_do_github_ // vincula meu projeto local ao repositório do github.
@@ -26,6 +26,8 @@ ou
 - O que é o Express
 - Protocolo http
 - Métodos http (GET, POST, PUT, PATCH, DELETE)
+- prisma
+-sequalize
 - Como mudar o formato de importação/exportação de require para import
 (Adicionar no package.json a propriedade type: "module")
 - --watch (parametro para rodar um js em modo dev, que permite rodar novamente o script quando algum arquivo é alterado)
@@ -43,3 +45,21 @@ app.post('/produto', (req, res) => {
 # Para que serve o Router(Roteador) do Express?
 
 -Para Organização e Liberação do server.js
+
+# Comandos do prisma
+
+- Instalação do Prisma
+    -npm i prisma -D
+    -npm i @prisma/client
+
+- Inicializar o Prisma
+    -npx prisma init
+
+- Gerar o model do prisma a partir de um BD existente
+    -npx prisma db pull
+
+- Gerar o BD a partir de um model do prisma
+    -npx prisma db push
+
+- Gerar os arquivos necessários para usar o prisma client no código
+    -

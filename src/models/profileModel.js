@@ -1,0 +1,10 @@
+import { PrismaClient } from '../generated/prisma/index.js'
+
+const prisma = new PrismaClient(
+)
+
+export const create = async (profile) =>{
+    return await prisma.user.create ({
+        data: profile
+    })
+}
