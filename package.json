@@ -15,16 +15,12 @@
     "zod",
     "mysql"
   ],
-  "author": "Renan Cavichi",
+  "author": "Raissa Eugenio",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^6.15.0",
     "cors": "^2.8.5",
     "express": "^5.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raissa-eugenio/api-backend-express.git"
   },
   "devDependencies": {
     "prisma": "^6.15.0"
